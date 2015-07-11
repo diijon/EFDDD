@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91111EAE-EA4E-415D-99C4-1A8324536D9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFDDD.DataModel.Migrations</RootNamespace>
+    <AssemblyName>EFDDD.DataModel.Migrations</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine">
+      <HintPath>..\..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.Data.Edm.5.6.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.Data.OData.5.6.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.Data.Services.Client.5.6.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.1.0\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\..\packages\Serilog.1.5.7\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx">
+      <HintPath>..\..\packages\Serilog.1.5.7\lib\net45\Serilog.FullNetFx.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\..\packages\structuremap.3.1.6.186\lib\net40\StructureMap.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzureImportExport\Azure\Endpoint.cs" />
+    <Compile Include="AzureImportExport\Azure\IImportExportHelper.cs" />
+    <Compile Include="AzureImportExport\Azure\IImportExportSettings.cs" />
+    <Compile Include="AzureImportExport\Azure\ImportExportHelper.cs" />
+    <Compile Include="AzureImportExport\Azure\ImportExportSettings.cs" />
+    <Compile Include="AzureImportExport\ProcessorExporterSettings.cs" />
+    <Compile Include="AzureImportExport\Contracts\IProcessor.cs" />
+    <Compile Include="AzureImportExport\Contracts\IProcessorCopier.cs" />
+    <Compile Include="AzureImportExport\Contracts\IProcessorCopierSettings.cs" />
+    <Compile Include="AzureImportExport\Contracts\IProcessorExporter.cs" />
+    <Compile Include="AzureImportExport\Contracts\IProcessorExporterSettings.cs" />
+    <Compile Include="AzureImportExport\Extensions.cs" />
+    <Compile Include="AzureImportExport\Internal\Extensions.cs" />
+    <Compile Include="AzureImportExport\Internal\Helpers.cs" />
+    <Compile Include="AzureImportExport\ProcessorCopier.cs" />
+    <Compile Include="AzureImportExport\ProcessorCopierSettings.cs" />
+    <Compile Include="AzureImportExport\ProcessorExporter.cs" />
+    <Compile Include="MigrationContext.cs" />
+    <Compile Include="Core\AzureCopierFactory.cs" />
+    <Compile Include="Core\ConsoleRunner\ICommandLineOptions.cs" />
+    <Compile Include="Core\ConsoleRunner\CommandLineOptions.cs" />
+    <Compile Include="Core\ConsoleRunner\IoCRegistry.cs" />
+    <Compile Include="Core\Contracts\IExternalConfiguration.cs" />
+    <Compile Include="Core\Contracts\ExternalConfiguration.cs" />
+    <Compile Include="Core\Contracts\IMigrationRunner.cs" />
+    <Compile Include="Core\Contracts\IMigrationRunnerLog.cs" />
+    <Compile Include="Core\Contracts\IMigrationRunnerSettings.cs" />
+    <Compile Include="Core\Contracts\IMigrationsConfigurationSettings.cs" />
+    <Compile Include="Core\Contracts\IMigrator.cs" />
+    <Compile Include="Core\Contracts\MigrationsConfigurationSettings.cs" />
+    <Compile Include="Core\MigrationRunner.cs" />
+    <Compile Include="Core\MigrationRunnerHelpers.cs" />
+    <Compile Include="Core\MigrationRunnerSettings.cs" />
+    <Compile Include="Core\RandomGen.cs" />
+    <Compile Include="ExternalConfiguration.cs" />
+    <Compile Include="Migrations\201507111116007_Add-Migration InitialSchema.cs" />
+    <Compile Include="Migrations\201507111116007_Add-Migration InitialSchema.Designer.cs">
+      <DependentUpon>201507111116007_Add-Migration InitialSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WASDImportExport.SqlAzure\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{edbdab42-96f1-44d6-994d-e4fd0c995328}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\WASDImportExport.SqlAzure\EFDDD.DataModel.Migrations.WASDImportExport.SqlAzure.StatusInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WASDImportExport.SqlAzure\Microsoft.SqlServer.Management.Dac.Services.wsdl" />
+    <None Include="Service References\WASDImportExport.SqlAzure\Microsoft.SqlServer.Management.Dac.ServiceTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WASDImportExport.SqlAzure\service.wsdl" />
+    <None Include="Service References\WASDImportExport.SqlAzure\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WASDImportExport.SqlAzure\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WASDImportExport.SqlAzure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WASDImportExport.SqlAzure\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WASDImportExport.SqlAzure\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WASDImportExport.SqlAzure\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507111116007_Add-Migration InitialSchema.resx">
+      <DependentUpon>201507111116007_Add-Migration InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
