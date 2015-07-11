@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
+using System.Data.Entity.Migrations.Infrastructure;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
@@ -244,6 +246,14 @@ namespace EFDDD.DataModel.Migrations.Core
         {
             try
             {
+                //Alternate way of finding migrations
+                //var migrationsAssembly = typeof (Migrations.AddMigrationInitialSchema).Assembly;
+                //var migrationsSimplified = (from t in migrationsAssembly.DefinedTypes.Select(t => t.AsType())
+                //                            where t.IsSubclassOf(typeof(DbMigration))
+                //                            select (IMigrationMetadata)Activator.CreateInstance(t))
+                //            .OrderBy(mm => mm.Id)
+                //            .ToList();
+
                 var connectionString = Settings.GetConnectionString(databaseName);
                 var migrator = Migrator.GetNewInstance(connectionString, DefaultConnectionClient);
                 return migrator.GetLocalMigrations();

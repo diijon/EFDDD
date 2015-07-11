@@ -117,7 +117,6 @@
     <Compile Include="Core\ConsoleRunner\CommandLineOptions.cs" />
     <Compile Include="Core\ConsoleRunner\IoCRegistry.cs" />
     <Compile Include="Core\Contracts\IExternalConfiguration.cs" />
-    <Compile Include="Core\Contracts\ExternalConfiguration.cs" />
     <Compile Include="Core\Contracts\IMigrationRunner.cs" />
     <Compile Include="Core\Contracts\IMigrationRunnerLog.cs" />
     <Compile Include="Core\Contracts\IMigrationRunnerSettings.cs" />
@@ -150,7 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\WASDImportExport.SqlAzure\EFDDD.DataModel.Migrations.WASDImportExport.SqlAzure.StatusInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
