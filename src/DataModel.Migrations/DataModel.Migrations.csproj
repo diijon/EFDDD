@@ -118,7 +118,6 @@
     <Compile Include="Core\ConsoleRunner\IoCRegistry.cs" />
     <Compile Include="Core\Contracts\IExternalConfiguration.cs" />
     <Compile Include="Core\Contracts\IMigrationRunner.cs" />
-    <Compile Include="Core\Contracts\IMigrationRunnerLog.cs" />
     <Compile Include="Core\Contracts\IMigrationRunnerSettings.cs" />
     <Compile Include="Core\Contracts\IMigrationsConfigurationSettings.cs" />
     <Compile Include="Core\Contracts\IMigrator.cs" />
